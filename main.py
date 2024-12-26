@@ -10,8 +10,9 @@ class DrawingApp:
         ''' Создание основного поля программы '''
         self.image = Image.new("RGB", (600, 400), "white")
         self.draw = ImageDraw.Draw(self.image)
+        self.canvas_background = 'white'
         ''' Данные холста'''
-        self.canvas = tk.Canvas(root, width=600, height=400, bg='white')
+        self.canvas = tk.Canvas(root, width=600, height=400, bg=self.canvas_background)
         self.canvas.pack()
         ''' Данные границы '''
         self.text_for_enter = ['blank', 'Arial', ' ', 'off']
@@ -152,7 +153,7 @@ class DrawingApp:
         """ Функция очистки холста """
         self.canvas.delete("all")
         ''' Очистка холста '''
-        self.image = Image.new("RGB", (600, 400), "white")
+        self.image = Image.new("RGB", (600, 400), self.canvas_background)
         self.draw = ImageDraw.Draw(self.image)
         ''' Заполнение холста белым цветом '''
 
@@ -261,9 +262,9 @@ class DrawingApp:
 
     def choose_background(self):
         """ Функция перекраски фона """
-        background_color = colorchooser.askcolor(color=self.pen_color)[1]
+        self.background_color = colorchooser.askcolor(color=self.pen_color)[1]
         ''' Выбор цвета фона из палитры '''
-        self.canvas.config(background=background_color)
+        self.canvas.config(background=self.background_color)
         ''' Замена цвета фона '''
 
 def main():
