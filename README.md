@@ -17,6 +17,6 @@
 ![](https://github.com/Lienar/Practicym2.7/blob/main/Screens/Screen7_4.jpg)
 
 ## Смена цвета фона
-![](https://github.com/Lienar/Practicym2.7/blob/main/Screens/Screen7_4.jpg)
+![](https://github.com/Lienar/Practicym2.7/blob/main/Screens/Screen7_5.jpg)
 
 ===========================================================================
